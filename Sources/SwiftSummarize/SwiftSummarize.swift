@@ -2,7 +2,7 @@ import CoreServices
 import Foundation
 
 /// Wraps CoreServices SKSummary
-struct Summary: Codable, Equatable {
+public struct Summary: Codable, Equatable {
     let input: String
     let sentenceCount: Int
     let paragraphCount: Int
@@ -14,7 +14,7 @@ struct Summary: Codable, Equatable {
     /// - Parameters:
     ///   - input: Full lengh text
     ///   - numberOfSentences: Size of summary by number of sentences
-    init(_ input: String, numberOfSentences: Int) {
+    public init(_ input: String, numberOfSentences: Int) {
         self.input = input
         self.numSentencesInSummary = numberOfSentences
         let summary = SKSummaryCreateWithString(input as CFString).takeRetainedValue()
@@ -33,7 +33,7 @@ struct Summary: Codable, Equatable {
     /// - Parameters:
     ///   - input: Full length text
     ///   - percent: Size of the summary in percent of input text
-    init(_ input: String, percent: CGFloat) {
+    public init(_ input: String, percent: CGFloat) {
         self.input = input
         let summary = SKSummaryCreateWithString(input as CFString).takeRetainedValue()
         self.sentenceCount = SKSummaryGetSentenceCount(summary)
@@ -51,7 +51,7 @@ struct Summary: Codable, Equatable {
     }
 }
 
-extension String {
+public extension String {
     /// Uses Summary type to generate summary from string
     /// - Parameter numberOfSentences: Size of summary by number of sentences
     /// - Returns: Summarized output string
