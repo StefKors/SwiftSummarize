@@ -3,12 +3,12 @@ import Foundation
 
 /// Wraps CoreServices SKSummary
 public struct Summary: Codable, Equatable {
-    let input: String
-    let sentenceCount: Int
-    let paragraphCount: Int
+    public let input: String
+    public let sentenceCount: Int
+    public let paragraphCount: Int
 
-    let output: String
-    let numSentencesInSummary: Int
+    public let output: String
+    public let numSentencesInSummary: Int
 
     /// Create summary from input
     /// - Parameters:
