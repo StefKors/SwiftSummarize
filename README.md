@@ -50,3 +50,8 @@ let output = input.summarize(numberOfSentences: 1)
 print(output)
 // Because the people who are crazy enough to think they can change the world, are the ones who do
 ```
+
+A full SwiftUI code example can be found at [/Example/ExampleSwiftUI.swift](https://github.com/StefKors/SwiftSummarize/blob/main/Example/ExampleSwiftUI.swift)
+
+![preview](https://github.com/StefKors/SwiftSummarize/assets/11800807/c3000422-0dbe-41f4-9cc4-7b85afec087f)
+
